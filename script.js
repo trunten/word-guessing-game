@@ -10,7 +10,7 @@ function start() {
     document.querySelector(".emoji").textContent = ""
     guessed = [];
     word = words[Math.floor(Math.random() * words.length)];
-    word = { word:"sunglasses", emoji:"🕶" };
+    // word = { word:"sunglasses", emoji:"🕶" };
     output();
     document.addEventListener("keypress",checkGuess);
     document.querySelector("#text").focus();
