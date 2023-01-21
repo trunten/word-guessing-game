@@ -4,7 +4,8 @@ let word = {};
 let guessed = [];
 
 function start() {
-    document.querySelector(".start").style.display ="none";
+    document.querySelector(".start").style.display = "none";
+    document.querySelector("#start").textContent = "RESTART"
     document.querySelector(".game").style.display = "";
     document.querySelector(".emoji").textContent = ""
     guessed = [];
@@ -17,15 +18,13 @@ function output() {
     let out = "";
     for (let i = 0; i < word.word.length; i++) {
         if (word.word[i] === " ") {
-            out += " ";
+            out += "<br>";
         } else if (guessed.includes(word.word[i])) {
             out += word.word[i];
         } else {
             out += "_";
         }
-        out += " "
     }
-    out = out.trim().replaceAll(" ","&nbsp;");
     document.querySelector(".word").innerHTML = out;
     if (!out.includes("_")) {
         document.querySelector(".emoji").textContent = word.emoji;
@@ -42,7 +41,7 @@ function checkGuess(e) {
         guessed.push(pressed);
         output();
     }
-    console.log(pressed);
+    // console.log(pressed);
 }
 
 document.querySelector("#start").addEventListener("click", (e) => {
@@ -52,11 +51,10 @@ document.querySelector("#start").addEventListener("click", (e) => {
 
 document.querySelector("#ok").addEventListener("click", () => {
     document.querySelector("#modal").close();
-    document.querySelector(".start").style.display = "";
+    start();
 });
 
 document.querySelector("#cancel").addEventListener("click", () => {
-    document.querySelector(".game").style.display = "none";
     document.querySelector("#modal").close();
 });
 
