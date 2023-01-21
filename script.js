@@ -7,7 +7,7 @@ function start() {
     document.querySelector(".start").style.display = "none";
     document.querySelector("#start").textContent = "RESTART"
     document.querySelector(".game").style.display = "";
-    document.querySelector(".emoji").textContent = ""
+    document.querySelector(".emoji").innerHTML = "&nbsp;";
     guessed = [];
     word = words[Math.floor(Math.random() * words.length)];
     output();
@@ -58,6 +58,7 @@ document.querySelector("#ok").addEventListener("click", () => {
 document.querySelector("#cancel").addEventListener("click", () => {
     document.querySelector("#modal").close();
     document.querySelector("#start").focus();
+    document.querySelector(".emoji").style.opacity = 1;
 });
 
 document.querySelector(".word").addEventListener("click", () => {
