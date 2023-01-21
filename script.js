@@ -29,14 +29,9 @@ function output() {
     document.querySelector(".word").innerHTML = out;
     if (!out.includes("_")) {
         document.querySelector(".emoji").textContent = word.emoji;
-        setTimeout(() => {
-            if (confirm(`You got it! ${word.emoji}\n\nPlay again?`)) {
-                start();
-            } else {
-                document.querySelector(".start").style.display = "";
-                document.removeEventListener("keypress",checkGuess);
-            }
-        }, 1000);
+        document.removeEventListener("keypress",checkGuess);
+        document.querySelector("#emojiSpan").textContent = word.emoji;
+        document.querySelector("#modal").showModal();
     }
 }
 
@@ -53,6 +48,16 @@ function checkGuess(e) {
 document.querySelector("#start").addEventListener("click", (e) => {
     e.preventDefault();
     start();
+});
+
+document.querySelector("#ok").addEventListener("click", () => {
+    document.querySelector("#modal").close();
+    document.querySelector(".start").style.display = "";
+});
+
+document.querySelector("#cancel").addEventListener("click", () => {
+    document.querySelector(".game").style.display = "none";
+    document.querySelector("#modal").close();
 });
 
 const words = [{ word:"shoe", emoji:"👞" }, { word:"sock", emoji:"🧦" }, { word:"hat", emoji:"🎩" }, { word:"sunglasses", emoji:"🕶" }, { word:"dog", emoji:"🐶" }, { word:"cat", emoji:"🐱" },
