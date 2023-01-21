@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word guessing game</title>
+</head>
+<body>
+    <!--
+                   __ooooooooo__
+              oOOOOOOOOOOOOOOOOOOOOOo
+          oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo
+       oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo
+     oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo
+   oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo
+  oOOOOOOOOOOO*  *OOOOOOOOOOOOOO*  *OOOOOOOOOOOOo
+ oOOOOOOOOOOO      OOOOOOOOOOOO      OOOOOOOOOOOOo
+ oOOOOOOOOOOOOo  oOOOOOOOOOOOOOOo  oOOOOOOOOOOOOOo
+oOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo
+oOOOO     OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     OOOOo
+oOOOOOO OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO OOOOOOo
+ *OOOOO  OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  OOOOO*
+ *OOOOOO  *OOOOOOOOOOOOOOOOOOOOOOOOOOOOO*  OOOOOO*
+  *OOOOOO  *OOOOOOOOOOOOOOOOOOOOOOOOOOO*  OOOOOO*
+   *OOOOOOo  *OOOOOOOOOOOOOOOOOOOOOOO*  oOOOOOO*
+     *OOOOOOOo  *OOOOOOOOOOOOOOOOO*  oOOOOOOO*
+       *OOOOOOOOo  *OOOOOOOOOOO*  oOOOOOOOO*      
+          *OOOOOOOOo           oOOOOOOOO*      
+              *OOOOOOOOOOOOOOOOOOOOO*          
+                   ""ooooooooo""                     
+-->
+    <h1 style="text-align: center;">Word guessing game</h1>
+    <div class="start" style="text-align: center;">
+        <h2>Click button to start</h2>
+        <button id="start" style="font-size: 1.5rem;">START</button>
+    </div>
+    <div class="game" style="display:none;text-align: center;">
+        <h2>Guess the word</h2>
+        <p class="word" style="font-size: 2rem;"></p>
+        <p class="emoji" style="font-size: 2rem;"></p>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
