@@ -2,6 +2,8 @@
 
 In this activity, you will work with a group to build a game using JavaScript and Web APIs.
 
+[Deployed Application](https://trunten.github.io/word-guessing-game/)
+
 ## Instructions
 
 The completed application should meet the following criteria:
