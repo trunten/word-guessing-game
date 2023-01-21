@@ -10,8 +10,10 @@ function start() {
     document.querySelector(".emoji").textContent = ""
     guessed = [];
     word = words[Math.floor(Math.random() * words.length)];
+    word = { word:"sunglasses", emoji:"🕶" };
     output();
     document.addEventListener("keypress",checkGuess);
+    document.querySelector("#text").focus();
 }
 
 function output() {
@@ -31,6 +33,7 @@ function output() {
         document.removeEventListener("keypress",checkGuess);
         document.querySelector("#emojiSpan").textContent = word.emoji;
         document.querySelector("#modal").showModal();
+        document.querySelector("#ok").focus();
     }
 }
 
@@ -42,6 +45,7 @@ function checkGuess(e) {
         output();
     }
     // console.log(pressed);
+    document.querySelector("#text").value = pressed;
 }
 
 document.querySelector("#start").addEventListener("click", (e) => {
@@ -56,6 +60,7 @@ document.querySelector("#ok").addEventListener("click", () => {
 
 document.querySelector("#cancel").addEventListener("click", () => {
     document.querySelector("#modal").close();
+    document.querySelector("#start").focus();
 });
 
 const words = [{ word:"shoe", emoji:"👞" }, { word:"sock", emoji:"🧦" }, { word:"hat", emoji:"🎩" }, { word:"sunglasses", emoji:"🕶" }, { word:"dog", emoji:"🐶" }, { word:"cat", emoji:"🐱" },
