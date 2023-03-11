@@ -1,4 +1,4 @@
-# Unit 04 Mini-Project: Word Guess
+Word Guessing Game
 
 In this activity, you will work with a group to build a game using JavaScript and Web APIs.
 
@@ -6,7 +6,7 @@ In this activity, you will work with a group to build a game using JavaScript an
 
 ## Description
 
-The completed application should meet the following criteria:
+### User Story
 
 * As a user, I want to start the game by clicking on a button. 
 
@@ -20,7 +20,9 @@ The completed application should meet the following criteria:
 
 * As a user, I want to see my total wins and losses on the screen. 
 
-### Specifications
+### Acceptance Criteria
+
+The completed application should meet the following criteria:
 
 * When a user presses a letter key, the user's guess should be captured as a key event.
 
