@@ -1,10 +1,10 @@
-Word Guessing Game
-
-In this activity, you will work with a group to build a game using JavaScript and Web APIs.
+# Word Guessing Game
 
 [Deployed Application](https://trunten.github.io/word-guessing-game/)
 
 ## Description
+
+A simple word guessing game. Type letters on your keyboard to try and solve the puzzle 🙂
 
 ### User Story
 
